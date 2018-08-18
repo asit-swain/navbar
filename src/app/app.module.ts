@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from "./shared/material/material.module";
 import { LayoutModule } from '@angular/cdk/layout';
+import { ProfilenavbarComponent } from './profilenavbar/profilenavbar.component';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 const appRoutes: Routes =[
   {path:'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule'},
@@ -15,7 +17,8 @@ const appRoutes: Routes =[
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfilenavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,12 @@ const appRoutes: Routes =[
     LayoutModule,
     MaterialModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

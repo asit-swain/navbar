@@ -1,24 +1,20 @@
- <mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav 
-  
     #drawer
     class="sidenav"
-    fixedInViewport="false"
+    fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)"
     #sidenav (click)="sidenav.toggle()">
     <mat-toolbar color="primary" >DTS Smart Bus</mat-toolbar>
-
     <mat-nav-list >
-      <a mat-list-item  routerLink="home">Home</a>
+      <a mat-list-item  routerLink="/home">Home</a>
       <a mat-list-item  routerLink="/about">About</a>
       <a mat-list-item routerLink="/contact">Contact</a>
       <a mat-list-item routerLink="/dashboard">Dashboard</a>
     </mat-nav-list>
-
   </mat-sidenav>
-
   <mat-sidenav-content >
     <mat-toolbar color="primary">
       <button
@@ -28,13 +24,9 @@
        (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        
       </button>
-      
       <span>DTS Smart City Bus</span>
-      
     </mat-toolbar>
-    <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container> -->
 <!-- 

@@ -19,7 +19,6 @@ import { TripplannerModule } from './tripplanner/tripplanner.module';
     AboutModule,
     HomeModule,
     TripplannerModule
-    
   ],
   declarations: [
     WebComponent,
