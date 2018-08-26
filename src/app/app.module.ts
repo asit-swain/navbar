@@ -9,9 +9,11 @@ import { MaterialModule} from "./shared/material/material.module";
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const appRoutes: Routes =[
-  {path:'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule'},
+  {path:'dashboard', loadChildren:'./dashboard/dashboard.module#DashboardModule', canActivate:[AuthGuardService]},
   { path: '', loadChildren: './web/web.module#WebModule'} 
 ]
 
@@ -34,7 +36,7 @@ const appRoutes: Routes =[
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

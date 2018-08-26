@@ -11,12 +11,18 @@ import {map, startWith} from 'rxjs/operators';
 export class TripplannerComponent 
   
   implements OnInit {
-    myControl = new FormControl();
+    srcControl = new FormControl();
+    destControl = new FormControl();
     options: string[] = ['Big Bazzar', 'Silicon', 'Infocity', 'Patia'];
-    filteredOptions: Observable<string[]>;
-  
+    filteredOptionsSrc: Observable<string[]>;
+    filteredOptionsDest: Observable<string[]>;
     ngOnInit() {
-      this.filteredOptions = this.myControl.valueChanges
+      this.filteredOptionsSrc = this.srcControl.valueChanges
+        .pipe(
+          startWith(''),
+          map(value => this._filter(value)
+        ));
+      this.filteredOptionsDest = this.destControl.valueChanges
         .pipe(
           startWith(''),
           map(value => this._filter(value))
@@ -25,7 +31,6 @@ export class TripplannerComponent
   
     private _filter(value: string): string[] {
       const filterValue = value.toLowerCase();
-  
       return this.options.filter(option => option.toLowerCase().includes(filterValue));
     }
 }

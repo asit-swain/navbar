@@ -8,6 +8,8 @@ import { AboutModule } from './about/about.module';
 import { ContactModule } from './contact/contact.module';
 import { MaterialModule } from '../shared/material/material.module';
 import { TripplannerModule } from './tripplanner/tripplanner.module';
+import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -17,12 +19,15 @@ import { TripplannerModule } from './tripplanner/tripplanner.module';
     MaterialModule,
     ContactModule,
     AboutModule,
-    HomeModule,
-    TripplannerModule
+    TripplannerModule,
+    LoginModule,
+    HomeModule
+    
   ],
   declarations: [
     WebComponent,
-    MainNavComponent
+    MainNavComponent,
+    LoginComponent
   ]
 })
 export class WebModule { }

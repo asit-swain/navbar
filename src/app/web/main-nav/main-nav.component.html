@@ -9,10 +9,14 @@
     #sidenav (click)="sidenav.toggle()">
     <mat-toolbar color="primary" >DTS Smart Bus</mat-toolbar>
     <mat-nav-list >
-      <a mat-list-item  routerLink="/home">Home</a>
-      <a mat-list-item  routerLink="/about">About</a>
+
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item routerLink="/tripplanner">Trip Planner</a>
+      <a mat-list-item routerLink="/login">Login</a>
+      <a mat-list-item routerLink="/about">About Us</a>
       <a mat-list-item routerLink="/contact">Contact</a>
-      <a mat-list-item routerLink="/dashboard">Dashboard</a>
+      
+  
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content >
@@ -30,9 +34,3 @@
     <router-outlet name='webOutlet'></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container> -->
-<!-- 
- <button routerLink = '/home'>Home</button>
-<button routerLink = '/about'>About</button>
-<button routerLink = '/contact'>Contact</button>
-
-<button routerLink = '/dashboard'>Login</button>  -->

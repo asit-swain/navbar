@@ -15,7 +15,6 @@ import { ProfilenavbarComponent } from './profilenavbar/profilenavbar.component'
     CommonModule,
     RouterModule,
     MaterialModule,
-    
     SettingsModule,
     ProfileModule,
   ],
