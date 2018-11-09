@@ -1,6 +1,6 @@
 <div >
 
-<form class="example-form" style="padding: 5%;">
+<form class="example-form" (ngModel)="onSubmit()" style="padding: 5%;">
     <mat-form-field class="example-full-width" >
       <input type="text" required placeholder="Source" aria-label="Number" matInput [formControl]="srcControl" [matAutocomplete]="auto1">
       <mat-autocomplete #auto1="matAutocomplete">
@@ -19,7 +19,7 @@
       </mat-autocomplete>
     </mat-form-field>
 
-      <button mat-raised-button>Submit</button>     <button mat-raised-button>Clear</button>
+      <button mat-raised-button (click)='getRoutes()'>Submit</button>     <button mat-raised-button>Clear</button>
 
   </form>
   </div>

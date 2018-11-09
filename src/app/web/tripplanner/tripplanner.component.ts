@@ -33,4 +33,12 @@ export class TripplannerComponent
       const filterValue = value.toLowerCase();
       return this.options.filter(option => option.toLowerCase().includes(filterValue));
     }
+
+    onSubmit(){
+      console.log("Submitted!")
+    }
+
+    getRoutes(){
+      console.log("Redirected to get routes");
+    }
 }

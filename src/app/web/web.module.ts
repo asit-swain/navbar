@@ -10,6 +10,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { TripplannerModule } from './tripplanner/tripplanner.module';
 import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LoginModule } from './login/login.module';
   ],
   declarations: [
     WebComponent,
+    SignupComponent,
     MainNavComponent,
     LoginComponent
   ]
